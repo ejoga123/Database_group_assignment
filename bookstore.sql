@@ -177,3 +177,51 @@ INSERT INTO author (first_name, last_name) VALUES
 ('John', 'james'),
 ('Janet', 'Smith'),
 ('Victoria', 'Zola');
+
+-- country insertion
+INSERT INTO country (country_name) VALUES 
+('USA'), 
+('South Africa'), 
+('Nigeria');
+
+-- book language insertion
+INSERT INTO book_language (language_name) VALUES 
+('English'), 
+('French'), 
+('Spanish');
+
+-- address insertion
+INSERT INTO address (street, city, country_id) VALUES 
+('123 Elm St', 'New York', 1),
+('456 Maple Ave', 'Toronto', 2),
+('789 Rue de Paris', 'Paris', 3);
+
+-- publisher insertion
+  INSERT INTO publisher (name, address_id) VALUES 
+('Pearson', 1),
+('Reilly Media', 2),
+('Gallimard', 3);
+
+-- book insertion
+INSERT INTO book (title, publisher_id, language_id) VALUES 
+('Learning SQL', 1, 1),
+('Advanced Python', 2, 1),
+('Germinal', 3, 2);
+
+-- book author insertion
+INSERT INTO book_author (book_id, author_id) VALUES 
+(1, 1),
+(2, 2),
+(3, 3);
+
+-- order line insertion
+INSERT INTO order_line (order_id, book_id, quantity, price) VALUES 
+(4, 1, 2, 29.99),
+(4, 2, 1, 49.99),
+(5, 3, 1, 19.99);
+
+-- order history insertion
+INSERT INTO order_history (order_id, status_id) VALUES 
+(4, 1),
+(4, 2),
+(5, 2);
