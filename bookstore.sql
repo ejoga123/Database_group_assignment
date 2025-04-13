@@ -135,3 +135,45 @@ CREATE TABLE order_history (
     updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (order_id) REFERENCES cust_order(order_id),
     FOREIGN KEY (status_id) REFERENCES order_status(order_status_id)
+);
+
+-- Content insertion starts from here
+
+
+-- Customer content insertion
+INSERT INTO customer (first_name, last_name, email) VALUES 
+('John', 'Johnson', 'john@example.com'),
+('James', 'Williams', 'james@example.com'),
+('Johnson', 'Williams', 'johnson@example.com');
+
+-- Shipping method insertion
+INSERT INTO shipping_method (method_name) VALUES 
+('Standard'), 
+('Express');
+
+-- Order status insertion
+INSERT INTO order_status (status_name) VALUES 
+('Pending'), 
+('Shipped'), 
+('Delivered');
+
+-- Customer order insertion
+INSERT INTO cust_order (customer_id, shipping_method_id, order_status_id) VALUES 
+(1, 1, 1),
+(2, 2, 2);
+
+-- Address status insertion
+INSERT INTO address_status (status_name) VALUES 
+('Home'), 
+('Work');
+
+-- Customer address insertion
+INSERT INTO customer_address (customer_id, address_id, address_status_id) VALUES 
+(1, 1, 1),
+(2, 2, 2);
+
+-- Author insertion
+INSERT INTO author (first_name, last_name) VALUES 
+('John', 'james'),
+('Janet', 'Smith'),
+('Victoria', 'Zola');
