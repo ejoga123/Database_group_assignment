@@ -145,6 +145,7 @@ INSERT INTO customer (first_name, last_name, email) VALUES
 ('John', 'Johnson', 'john@example.com'),
 ('James', 'Williams', 'james@example.com'),
 ('Johnson', 'Williams', 'johnson@example.com');
+('victor', 'Jude', 'victor@example.com');
 
 -- Shipping method insertion
 INSERT INTO shipping_method (method_name) VALUES 
